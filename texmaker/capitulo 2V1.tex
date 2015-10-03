@@ -1,4 +1,4 @@
-\documentclass[spanish]{report}
+\documentclass[english]{report}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
@@ -9,7 +9,7 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{setspace}
-\usepackage{esint}
+
 
 
 \PassOptionsToPackage{normalem}{ulem}
@@ -157,6 +157,7 @@ a $E(X)$ como $\mu.$
 
 La varianza de una variable aleatoria se denota como $Var(X)$ o $\sigma^{2}$y
 se define por:
+
 \begin{equation}
 Var(X)=E(X-E(X))^{2}. \label{c2eq4}
 \end{equation}
@@ -169,7 +170,6 @@ Nótese que al desarrollar el binomio y aplicar esperanza en la ecuación
 \sigma^{2}=E(X^{2})-\mu^{2}.
 \label{c2eq5}
 \end{equation}
-
 
 
 \paragraph{Estimadores de la media y la varianza}
@@ -240,6 +240,8 @@ de $\mu$.
 
 Para demostrar que $\hat{\sigma}^{2}$ es un estimador insesgado
 de $\sigma^{2}$ se procede de la siguiente forma
+
+
 \begin{eqnarray*}
 E(\hat{\sigma}^{2}) & = & E(\frac{1}{n-1}\sum_{i=1}^{n}(X_{i}-\bar{X})^{2})\\
  & = & \frac{1}{n-1}(E([\sum_{i=1}^{n}(X_{i}^{2}-2\bar{XX_{i}+}\bar{X}^{2}))\\
@@ -513,10 +515,10 @@ estándar $\hat{\sigma}=\sqrt{\hat{\sigma}^{2}}$.
 \centering
 \includegraphics[scale = 0.7]{/home/jorge/Dropbox/TESIS/imagenes/CPk.jpg}
 \caption{}
-\label{c2f3}
+\label{c2f2}
 \end{figure}
 
-En la Figura \ref{c2f3} se muestran diferentes valores de $C_{pk}$ y como a
+En la Figura \ref{c2f2} se muestran diferentes valores de $C_{pk}$ y como a
 medida que el valor es mayor que uno el proceso esta mejor centrado
 y por ende tiene una menor probabilidad de generar no conformes.
 
@@ -535,7 +537,7 @@ La distribución normal multivariada es una generalización de la densidad de pr
 \label{c2eq11}
 \end{equation}
 
-Si se representa $\textbf{•}$ como un vector $p \times 1$ de observaciones de diferentes variables se puede reescribir \ref{c2eq11} como,
+Si se representa $\textbf{X}$ como un vector $p \times 1$ de observaciones de diferentes variables se puede reescribir \ref{c2eq11} como,
 
 \begin{equation}
 (\textbf{X}-\vec{\mu})^T\,\Sigma^{-1}\,(\textbf{X}-\vec{\mu})
@@ -545,7 +547,7 @@ Si se representa $\textbf{•}$ como un vector $p \times 1$ de observaciones de 
 
 Donde el vector $\vec{\mu}$ de dimensión $p \times 1$ representa los valores esperados del vector aleatorio $\textbf{ X }$, y la matriz $\Sigma$ de $p \times p$ representa las varianzas-covarianzas de $\textbf{X}=(X_1,\,X_2,\cdots,X_p)$.
 
-Además, si se supone que $\Sigma$ es positiva definida, entonces se tiene que la expresión en \ref{c2eq12} es el cuadrado de la distancia generalizada de $\vec{x}$ a $\vec{\mu}$.
+Además, si se supone que $\Sigma$ es positiva definida, entonces se tiene que la expresión en \ref{c2eq12} es el cuadrado de la distancia generalizada de $\textbf{ X }$ a $\vec{\mu}$.
 
 La densidad normal multivariada se obtiene remplazando la distancia cuadrática en \ref{c2eq1} con esta última expresión
 
@@ -560,12 +562,20 @@ Vemos en la expresión anterior que la constante de normalización $(\sigma^2)^{
 
 Esto es necesario ya que en el caso multivariada, las probabilidades se representan por volúmenes bajo la superficie sobre regiones definidas en intervalos de valores de $x_i$.
 
-\paragraph{Propiedades}
-\subparagraph{Densidad normal bivariada}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.3]{/home/jorge/Dropbox/TESIS/imagenes/bivariateNormalnonindependentvariables.png}
+\caption{Contorno de densidad constante para distribución normal bivariada con $\sigma_{11}=\sigma_{12}$ y $\sigma_{12} > 0$ o $\rho_{12} > 0$}
+\label{c2f3}
+\end{figure}
+
+\paragraph{Densidad normal bivariada}
 
 A fin de ejemplo mostraremos el desarrollo de la densidad normal bivariada con la finalidad de discutir algunas propiedades de esta.
 
+
 Sea $p=2$ y $\mu_1=E(X_1)$, $\mu_2=E(X_2)$, $\sigma_{11} = Var(X_1),\;\sigma_{22}=Var(X_2)$, y $\rho_{12} = \sigma_{12}/(\sqrt{\sigma_{11}}\sqrt{\sigma_{22}})\,=\,Corr(X_1,\,X_2)$.  
+
 
 Tenemos que
 
@@ -582,7 +592,7 @@ $\Sigma^{-1}\,=\,\frac{1}{\sigma_{11}\sigma_{22}-\sigma^2_{12}}\,\begin{bmatrix}
 \end{bmatrix}$
 
 
-Introduciendo el coeficiente de correlación $\rho_{12}$ escribiendo $\sigma_{12}=\rho_{12}\sqrt{\sigma_{11}\,\sigma_{22}}$, se obtiene que $|\Sigma|\,=\,\sigma_{11}\sigma_{22}-\sigma^2_{12}=\sigma_{11}\sigma_{22}(1-\rho^2_{12})$, desarrollando la expresión \ref{c2eq12}  se llega a
+Introduciendo el coeficiente de correlación $\rho_{12}$ escribiendo $\sigma_{12}=frac{\rho_{12}}{\sqrt{\sigma_{11}\,\sigma_{22}}}$, se obtiene que $|\Sigma|\,=\,\sigma_{11}\sigma_{22}-\sigma^2_{12}=\sigma_{11}\sigma_{22}(1-\rho^2_{12})$, desarrollando la expresión \ref{c2eq12}  se llega a
 
 \begin{equation}
 \frac{1}{1-\rho^2_{12}}\,\left[\left(\frac{x_1-\mu_1}{\sqrt{\sigma_{11}}}\right)^2\,+\,\left(\frac{x_2-\mu_2}{\sqrt{\sigma_{22}}}\right)^2\,-\,2\rho_{12}\left(\frac{x_1-\mu_1}{\sqrt{\sigma_{11}}}\right)\,\left(\frac{x_2-\mu_2}{\sqrt{\sigma_{22}}}\right)\right]
@@ -600,20 +610,30 @@ Se puede observar en la expresión anterior que si las variables $X_1,\,X_2$ no 
 
 Esto es, $f(x_1,\,x_2)\,=\,f(x_1)\,f(x_2)$ y $X_1,\,X_2$ son independientes.
 
-De la expresión \ref{c2eq12} debe ser claro que la ruta de los valores de $\textbf{x}$ generan un elipsoide; Esto es, la función de densidad normal multivariada es constante en superficies donde el cuadrado de la distancia proporcionado por \ref{c2eq12} es constante. Estas rutas se les asigna el nombre de \emph{contornos}.
+De la expresión \ref{c2eq12} debe ser claro que la gráfica de los valores de $\textbf{x}$ generan un elipsoide; Esto es, la función de densidad normal multivariada es constante en superficies donde el cuadrado de la distancia proporcionado por \ref{c2eq12} es constante. Estas gráficas se les asigna el nombre de \emph{contornos}.
 
-Entonces tenemos que un \emph{contorno de densidad de probabilidad constante} esta definido para toda $\textbf{X}$ tal que $(\textbf{X}-\vec{\mu})^T\,\Sigma^{-1}\,(\textbf{X}-\vec{\mu})\,=\,c^2$ que representa la superficie generada por el elipsoide centrado en $\vec{\mu}$.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.3]{/home/jorge/Dropbox/TESIS/imagenes/bivariateNormalR.ps}
+\caption{Contornos y gráfica de distribución para diferentes valores de $\rho$ y $\sigma$. Observe que si $\rho \neq 0$ causa que la probabilidad se concentre alrededor de uno de los ejes}
+\label{c2f4}
+\end{figure}
 
-Los ejes de los elipsoides están dirigidos en el sentido dado por los vectores característicos de $\Sigma^{-1}$, y las longitudes son proporcionales al reciproco de la raíz cuadrada de los valores característicos. Afortunadamente, es factible evitar el calculo de $\Sigma^{-1}$ ya que también se pueden encontrar la dirección y el sentido de los ejes de la elipsoide usando los valores y vectores característicos de $\Sigma$. Dado que si $\Sigma$ es positiva definida existe $\Sigma^{-1}$ y se satisface que
+
+Entonces tenemos que un \emph{contorno de densidad de probabilidad constante} esta definido para toda $\textbf{X}$ tal que $(\textbf{X}-\vec{\mu})^T\,\Sigma^{-1}\,(\textbf{X}-\vec{\mu})\,=c^2$, y representa la superficie generada por el elipsoide centrado en $\vec{\mu}$.
+
+Los ejes de los elipsoides están dirigidos en el sentido dado por los vectores característicos de $\Sigma^{-1}$, y las longitudes son proporcionales al reciproco de la raíz cuadrada de los valores característicos.
+
+Afortunadamente, es factible evitar el calculo de $\Sigma^{-1}$ ya que también se pueden encontrar la dirección y el sentido de los ejes de la elipsoide usando los valores y vectores característicos de $\Sigma$. Dado que si $\Sigma$ es positiva definida existe $\Sigma^{-1}$ y se satisface que:
 
 
 $\Sigma\,\vec{e}\,=\,\lambda\,\vec{e}\qquad$ lo que implica $\qquad\Sigma^{-1}\,\vec{e}\,=\,\frac{1}{\lambda}\,\vec{e}$
 
-así que los valores y vectores característicos de $\Sigma\rightarrow$ ($\lambda,\,\vec{e}$), corresponden a los valores y vectores característicos de $\Sigma^{-1}\rightarrow$ ($\frac{1}{\lambda},\,\vec{e}$). 
 
-Donde $\Sigma^{-1}$ también es positiva definida.
+así que los valores y vectores característicos de $\Sigma\rightarrow$ ($\lambda,\,\vec{e}$), corresponden a los valores y vectores característicos de $\Sigma^{-1}\rightarrow$ ($\frac{1}{\lambda},\,\vec{e}$), donde $\Sigma^{-1}$ también es positiva definida.
 
-Para el caso bivariado cuando $\sigma_{11}\,=\,\sigma_{22}$, se obtienen los valores y vectores característicos siguientes )ver Applied Multivariate Statistical Analysis Richard A. Johnson, Dean W. wichern, 2007. pagina 154.
+
+Tenemos entonces que continuando el caso bivariado. Cuando $\sigma_{11}\,=\,\sigma_{22}$, se obtienen los valores y vectores característicos siguientes, (ver Applied Multivariate Statistical Analysis Richard A. Johnson, Dean W. wichern, 2007. pagina 154).
 
 $\lambda_1\,=\,\sigma_{11}+\sigma_{12}$ y $\vec{e}_1\,=\,\begin{bmatrix}
 \frac{1}{\sqrt{2}},
@@ -632,7 +652,7 @@ Si la covarianza $\sigma_{12}$ (o correlación $\rho_{12}$) es positiva, $\lambd
 \centering
 \includegraphics[scale=.3]{/home/jorge/Dropbox/TESIS/imagenes/BivariateNormalContourEqualVariances.png}
 \caption{Contorno de densidad constante para distribución normal bivariada con $\sigma_{11}=\sigma_{12}$ y $\sigma_{12} > 0$}
-\label{c2f4}
+\label{c2f5}
 \end{figure}
 
 Si el coeficiente de correlación $\rho_{12}$ es negativo, $\lambda_2\,=\,\sigma_{11}-\sigma_{12}$ es el vector de mayor valor y el eje principal del elipsoide se inclinara a 135 grados del eje positivo que pasa por el punto $\mu^*$.
@@ -655,39 +675,135 @@ donde
 $\Sigma\,\vec{e}_i\,=\,\lambda\,\vec{e}_i\qquad\,i=1,2,\cdots,p$.
 
 \vspace{5pt}
-Se puede ver Revisar Applied Multivariate Statistical Analysis Richard A. Johnson, Dean W. wichern, 2007. pagina 161. que
+Se puede revisar Applied Multivariate Statistical Analysis Richard A. Johnson, Dean W. wichern, 2007. pagina 161. que para cuando $n$ es grande
 
 \vspace{5pt}
-$(\textbf{X}-\vec{\mu})^T\,\Sigma^{-1}\,(\textbf{X}-\vec{\mu})\leq \chi^2_p(\alpha)$
+
+Sea $\textbf{X}$ una variable aleatoria distribuída $N_p(\mu,\Sigma)$ con $|\Sigma|>0$ entonces:
+\begin{itemize}
+$(\textbf{X}-\vec{\mu})^T\,\Sigma^{-1}\,(\textbf{X}-\vec{\mu})$ se distribuye como una distribución $\chi^2_p$ con $p$ grados de libertad.
+La distribución $N_p(\mu,\Sigma)$ asigna una probabilidad $1-\alpha$ al elipsoide ${X|(\textbf{X}-\vec{\mu})^T\,\Sigma^{-1}\,(\textbf{X}-\vec{\mu}) \leq \chi^2_{p(\alpha)}$, donde $\chi^2_{p(\alpha)}$ denota el $(100\alpha)$ percentil de la distribución.
+\end{itemize}
 
 \vspace{5pt}
-tiene una probabilidad $1-\alpha$.
 
-En la siguiente figura se pueden ver los contornos constantes de densidad de probabilidad para los casos donde $50\%$ y $90\%$ de la probabilidad bajo la superficie normal bivariada.
+En la siguiente figura se pueden ver los contornos constantes de densidad de probabilidad para los casos donde la probabilidad bajo la superficie normal bivariada es $50\%$ y $90\%$ respectivamente.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.3]{/home/jorge/Dropbox/TESIS/imagenes/BivariateContours50_90.png}
 \caption{Contorno de densidad constante para $50\%$ y $90\%$ de probabilidad}
-\label{c2f5}
+\label{c2f6}
 \end{figure}
   
 
 La distribución normal \emph{p} variada tiene su valor máximo cuando el cuadrado de la distancia en \ref{c2eq15} es cero, es decir cuando $\textbf{X}=\vec{\mu}$. Por lo que $\vec{\mu}$ es el punto de máxima densidad, así como el valor esperado de \textbf{X}. El hecho de que $\vec{\mu}$ es la media de una distribución normal multivariada se sigue de la simetría exhibida por los contornos de densidad constante. Estos están centrados y balanceados en $\vec{\mu}$.
 
-Para concluir esta sección se introducirán dos propiedades de los vectores aleatorios normales multivariables.
-
-Sea \textbf{X} distribuida $N_p(\vec{\mu},\,\Sigma)$ con $|\Sigma|>0$. Se tiene que 
-\begin{itemize}
-\item $(\textbf{X}-\vec{\mu})^T\,\Sigma^{-1}\,(\textbf{X}-\vec{\mu})$ se distribuye como $\chi^2$, donde $\chi^2$ denota la distribución chi-cuadrada con $p$ grados de libertad.
-\item La distribución $N_p(\vec{\mu},\,\Sigma)$ asigna una probabilidad de $1-\alpha$ a la elipsoide definida por ${\vec{x}:(\vec{x}-\vec{\mu})^T\,\Sigma^{-1}\,(\vec{x}-\vec{\mu})\,\leq\,\chi^2(\alpha)}$, donde $\chi^2(\alpha)$ denota el área superior al $(100\alpha)th$ percentil de la distribución chi-cuadrada.
-\end{itemize} 
 
 \paragraph{Muestreo de una distribución normal multivariada}
-Al tomar muestras de una población normal multivariada se tienen dos estimadores para la media $\bar{X}$ y $\textbf{S}$ 
-\paragraph{Estimadores de máxima verosimilitud de $\vec{\mu}$ y $\Sigma$}
-Los estimadores de máxima verosimilitud de $\vec{\mu}$ y de $\Sigma$ son aquellos valores denotados por $\hat{\mu}$ y $\hat{\Sigma}$ que maximizan la función $L(\vec{\mu},\,\Sigma)$.
-Los estimadores $\hat{\mu}$ y $\hat{\Sigma}$ dependen de los valores observados $\vec{x}_1,\,\vec{x}_2,\cdots,\vec{x}_n$ en cada experimento resumidos por $\bar{\vec{x}}$ y el $\textbf{S}$.
+
+Al tomar muestras de una población normal multivariada la única fuente de información son los datos tomados en sitio. Inferencias estadísticas son por tanto la forma adecuada para extraer conclusiones sobre la población multivariada.
+
+En inferencia estadística los datos tomados de la muestra se procesan matemáticamente para encontrar estadísiticos. La distribución de probabilidad de un estadístico se conoce como distribución de muestreo. 
+
+Para la distribiución normal multivariada, se tienen dos estadísticos importantes, la media $\bar{X}$ y la matriz de covarianzas $\textbf{S}$ 
+
+
+\paragraph{Distribuciones de muestreo de $\bar{X}$ y de $\textbf{S}$}
+
+Suponiendo que  $\textbf{X}_1,\,\textbf{X}_2,\cdots,\textbf{X}_n$ constituyen una muestra aleatoria tomada de una población normal donde la distribución de la variable aleatoria $X \sim N_p(\vec{\mu},\,\Sigma)$ determina completamente la distribución de muestreo de $\bar{X}$ y de $\textbf{S}$.
+
+Usando ahora el caso univariado donde $\bar{x} \sim N(\mu,\,\sigma^2)$ para presentar los resultados de $\bar{X}$ y de $\textbf{S}$
+\vspace{5pt}
+En el caso univariado $(p=1)$ sabemos que $\bar{X}$ es normal con media $\mu$ y varianza
+$\frac{1}{n}\sigma^2\,=\,\frac{\text{varianza población}}{\text{tamaño de la muestra}}$  
+
+\vspace{5pt}
+  
+El resultado para $p \geq 2$ es análogo en que $\bar{X}$ tiene una distribución normal con media $\vec{\mu}$ y covarianza $\frac{1}{n}\,\Sigma$.
+
+Para la varianza de la muestra recordemos que $(n-1)s^2\,=\,\sum_{j=1}^n(X_j-\bar{X})^2$ se distribuye $\sigma^2$ veces una variable aleatoria chi-cuadrada con $n-1$ grados de libertad.
+
+Para el caso multivariado se tiene que $(n-1)s^2$ se distribuye como $\sigma^2(Z^2_1+Z^2_2+\cdots+Z^2_{n-1})=(\sigma_,Z_1)^2+\cdots+(\sigma\,Z_{n-1})^2$. Los términos $\sigma\,Z_i$ se distribuyen de forma independiente con distribución $N(0,\sigma^2)$. Es esta última forma la que se puede generalizar de forma adecuada a una función de distribución para la matriz de covarianzas de la muestra.
+
+
+La distribución de muestreo de la matriz de covarianza de la muestra se denomina distribución \emph{Wishart} y se define como la suma de productos de vectores aleatorios normales que es igual a la distribución del la suma de los productos de las variables $Z$. 
+
+\vspace{5pt}
+$W_m(\dot|\Sigma)= \text{distribución de   } \sum_{j=1}^m Z_jZ_j^T$
+
+donde $Z_j \sim N_p(0,\Sigma)$ 
+
+Resumiendo tenemos:
+
+Sea $\textbf{X}_1,\,\textbf{X}_2,\cdots,\textbf{X}_n$ una muestra aleatoria de tamaño $n$ de una distribución normal \emph{p-variada} con media $\vec{\mu}$ y matriz de covarianza $\Sigma$.
+
+\begin{enumerate}
+\item $\bar{X}$ se distribuye como $N_p(\vec{\mu},\,\Sigma)$
+\item $(n-1)\textbf{S}$ se distribuye como una \emph{matriz aleatoria Whisart} con $n-1$ grados de libertad.
+\item $\bar{X}$ y $\textbf{S}$ son independientes.
+\end{enumerate}
+
+Debido a que $\Sigma$ es desconocida, la distribución de $\bar{X}$ no se puede utilizar directamente para hacer inferencias sobre $\vec{\mu}$. Sin embargo, $\textbf{S}$ proporciona información independiente de $\Sigma$, y la distribución de $\textbf{S}$ no depende de $\vec{\mu}$ lo que permite construir un estadístico para hacer inferencias con respecto a $\vec{\mu}$.
+
+
+\subsection{Inferencias sobre el vector de medias $\vec{\mu}$}
+Así como en inferencia univariada es necesario comprobar que la media encontrada a través de una muestra ($\mu_0$) es igual a la media de la población ($\mu$) con una cierto nivel de confianza, en el caso multivariado es factible hacer algo simlar.
+
+Revisando el caso univariado se tiene la hipótesis.
+ 
+\vspace{5pt}
+$H_0:\mu_0 = \mu \qquad$ y $H_1:\mu_0 \neq \mu$
+\vspace{5pt}
+Donde $H_0$ es la hipótesis nula y $H_1$ la hipótesis alternativa y dado que el signo es una prueba es igual, la misma es una prueba de dos colas.
+
+Si $X_1,\,X_2,\,\cdots,\,X_n$ representan una muestra aleatoria tomada de una distribución normal, para verificar la hipótesis que la media de la muestra es igual a la media de prueba, el estadístico adecuado es la $t$ de student con $n-1$ grados de libertad.
+\vspace{5pt}
+$t=\frac{\bar{X}-\mu_0}{\frac{s}{\sqrt{n}}}$, 
+\vspace{5pt}
+donde
+\vspace{5pt}
+$\bar{X}= \frac{1}{n}\sum_{j=1}^n\,X_j$ 
+\vspace{5pt}
+y
+\vspace{5pt}
+$s^2=\frac{1}{n-1}\sum_{j=1}^n\,(X_j-\bar{X})^2$
+\vspace{5pt}
+y se rechaza $H_0$ si el valor calculado de $|t|$ es mayor si excede el valor límite dado por los puntos críticos encontrados de tablas. $t_{\frac{\alpha}{2},\nu}$ donde $\nu$ representa los grados de libertad. 
+\vspace{5pt}
+Ahora podemos considerar que rechazar $H_0$ cuando $|t|$ es grande es equivalente a rechazar $H_0$ si $t^2$ es también grande, donde
+\vspace{5pt}
+$t^2\,=\,\frac{\bar{X}-\mu_0}{s^2/n}\,=\,n(\bar{X}-\mu_0)(s^2)^{-1}(\bar{X}-\mu_0)$  
+\vspace{5pt}
+El estadístico $t^2$ representa el cuadrado de la distancia de la media de la muestra $\bar{X}$ con respecto al valor de prueba $\mu_0$, los valores están dados en unidades estimadas de desviación estándar $s/\sqrt{n}$.
+\vspace{5pt}
+Una vez calculadas la $\bar{X}$ y la $s^2$ de la muestra observada, se hace la prueba de hipótesis y se rechaza $H_0$ a un nivel de confianza $\alpha$, si
+\vspace{5pt}
+$n(\bar{x}-\mu_0)(s^2)^{-1}(\bar{x}-\mu_0) \geq t^2_{n-1}\,(\alpha/2)$
+\vspace{5pt}
+donde $t^2_{n-1}\,(\alpha/2)$ es el valor crítico superior y que el área bajo la distribución $t^2$ con $\nu=n-1$ grados de libertad equivale a un porcentaje equivalente a $100(\alpha/2)$.
+\vspace{5pt}
+Suponerse ahora que se desea encontrar un intervalo de confianza para la media de la distribución, sea entonces una distribución normal con media $\mu$ y varianza desconocida la distribución de muestreo de la estadística
+\vspace{5pt}
+$T=\frac{\bar{X}-\mu}{s/\sqrt{n}}$   
+\vspace{5pt}
+es una distribución $t$ con $n-1$ grados de libertad por lo que 
+\vspace{5pt}
+$P(-t_{\alpha/2,\,n-1} \leq T \leq t_{\alpha/2,\,n-1})=1-\alpha$
+\vspace{5pt}
+o
+\vspace{5pt}
+$P(-t_{\alpha/2,\,n-1} \leq \frac{\bar{X}-\mu}{S/\sqrt{n}} \leq t_{\alpha/2,\,n-1})=1-\alpha$
+\vspace{5pt}
+después de reacomodar se obtiene
+\vspace{5pt}
+$P(\bar{X}-t_{\alpha/2,\,n-1}\,\frac{S}{\sqrt{n}} \leq \mu \leq \bar{X}+t_{\alpha/2,\,n-1}\,\frac{S}{\sqrt{n}})= 1-\alpha$
+\vspace{5pt}
+El intervalo de confianza corresponde a los valores de $\mu_0$ que no serán rechazados con un nivel de confianza $\alpha$ en un prueba de hipótesis $H_0:\mu=\mu_0$
+\vspace{5pt}
+#\paragraph{Estimadores de máxima verosimilitud de $\vec{\mu}$ y $\Sigma$}
+#Los estimadores de máxima verosimilitud de $\vec{\mu}$ y de $\Sigma$ son aquellos valores #denotados por $\hat{\mu}$ y $\hat{\Sigma}$ que maximizan la función $L(\vec{\mu},\,\Sigma)$.
+#Los estimadores $\hat{\mu}$ y $\hat{\Sigma}$ dependen de los valores observados $\vec{x}_1,\,\vec{x}_2,\cdots,\vec{x}_n$ en cada experimento resumidos por $\bar{\vec{x}}$ y el $\textbf{S}$.
 Sean $\textbf{X}_1,\,\textbf{X}_2,\cdots,\textbf{X}_n$ una muestra aleatoria tomada de una población normal con media $\vec{\mu}$ y covarianza $\Sigma$. Entonces
 \vspace{10pt}
 
@@ -703,98 +819,6 @@ $\hat{\Sigma}\,=\,\frac{1}{n}\sum_{j=1}^n (\textbf{X}_j\,-\,\bar{\textbf{X}})\,(
 \vspace{10pt}
 
 son los estimadores de máxima verosimilitud de $\vec{\mu}$ y de $\Sigma$, respectivamente y las observaciones $\frac{1}{n}\sum_{j=1}^n (\vec{x}_j\,-\,\bar{x})\,(\vec{x}_j\,-\,\bar{x})^T$, se definen como los estimados de máxima verosimilitud de $\vec{\mu}$ y de $\Sigma$.
-
-\paragraph{Distribuciones de muestreo de $\bar{X}$ y de $\textbf{S}$}
-
-Suponer que  $\textbf{X}_1,\,\textbf{X}_2,\cdots,\textbf{X}_n$ constituyen una muestra aleatoria tomada de una población normal con media $\vec{\mu}$ y covarianza $\Sigma$ determina completamente la distribución de muestreo de $\bar{X}$ y de $\textbf{S}$.
-
-Retomando para el caso univariable donde $\bar{X}$ es normal con media de la población $\mu$ y varianza $\sigma^2$
-
-\vspace{5pt}
-$\frac{1}{n}\sigma^2\,=\,\frac{\text{varianza población}}{\text{tamaño de la muestra}}$  
-
-\vspace{5pt}
-El resultado para $p \geq 2$ es análogo en que $\bar{X}$ tiene una distribución normal con media $\vec{\mu}$ y covarianza $\frac{1}{n}\,\Sigma$.
-
-Para la varianza de la muestra recordemos que $(n-1)s^2\,=\,\sum_{j=1}^n(X_j-\bar{X})^2$ se distribuye $\sigma^2$ veces una variable aleatoria chi-cuadrada con $n-1$ grados de libertad.
-
-Para el caso multivariado se tiene que $(n-1)s^2$ se distribuye como $\sigma^2(Z^2_1+Z^2_2+\cdots+Z^2_{n-1})=(\sigma_,Z_1)^2+\cdots+(\sigma\,Z_{n-1})^2$. Los términos $\sigma\,Z_i$ se distribuyen de forma independiente con distribución $N(0,\sigma^2)$. Es esta última forma la que se puede generalizar de forma adecuada a una función de distribución para la matriz de covarianzas de la muestra.
-La distribución muestral de la matriz de covarianza de la muestra se denomina distribución \emph{Wishart}. 
-
-\vspace{5pt}
-$W_m(|\Sigma)$ es la distribución Whishart com $m$ grados de libertad.
-
-que es igual a la distribución del la suma de los productos de las variables $Z$ es decir.
-
-\vspace{5pt}
-$W_m(|\Sigma)= \text{distribución de   } \sum_{j=1}^m Z_jZ_j^T$
-
-donde $Z_j \sim N_p(0,\Sigma)$ 
-
-Resumiendo tenemos:
-
-Sea $\textbf{X}_1,\,\textbf{X}_2,\cdots,\textbf{X}_n$ una muestra aleatoria de tamaño $n$ de una distribución normal \emph{p-variada} con media $\vec{\mu}$ y matriz de covarianza $\Sigma$.
-
-\begin{enumerate}
-\item $\bar{X}$ se distribuye como $N_p(\vec{\mu},\,\Sigma)$
-\item $(n-1)\textbf{S}$ se distribuye como una \emph{matriz aleatoria Whisart} con $n-1$ grados de libertad.
-\item $\bar{X}$ y $\textbf{S}$ son independientes.
-\end{enumerate}
-
-Debido a que $\Sigma$ es desconocida, la distribución de $\bar{X}$ no se puede utilizar directamente para hacer inferencias sobre $\vec{\mu}$. Sin embargo, $\textbf{S}$ proporciona información independiente de $\Sigma$, y la distribución de $\textbf{S}$ no depende de $\vec{\mu}$. Lo que permite construir un estadístico para hacer inferencias con respecto a $\vec{\mu}$ como se vera mas adelante.
-
-\subsection{Inferencias sobre el vector de medias $\vec{\mu}$}
-Así como en inferencia univariada es necesario comprobar que la media encontrada a través de una muestra ($\mu_0$) es igual a la media de la población ($\mu$) con una cierto nivel de confianza, en el caso multivariado es factible hacer algo simlar.
-
-Revisando el caso univariado se tiene la hipótesis.
- 
-
-$H_0:\mu_0 = \mu \qquad$ y $H_1:\mu_0 \neq \mu$
-
-Donde $H_0$ es la hipótesis nula y $H_1$ la hipótesis alternativa y dado que el signo es una prueba es igual, la misma es una prueba de dos colas.
-
-Si $X_1,\,X_2,\,\cdots,\,X_n$ representan una muestra aleatoria tomada de una distribución normal, para verificar la hipótesis que la media de la muestra es igual a la media de prueba, el estadístico adecuado es la $t$ de student con $n-1$ grados de libertad.
-
-$t=\frac{\bar{X}-\mu_0}{\frac{s}{\sqrt{n}}}$, 
-
-donde
-
-$\bar{X}= \frac{1}{n}\sum_{j=1}^n\,X_j$ 
-
-y
-
-$s^2=\frac{1}{n-1}\sum_{j=1}^n\,(X_j-\bar{X})^2$
-
-y se rechaza $H_0$ si el valor calculado de $|t|$ es mayor si excede el valor límite dado por los puntos críticos encontrados de tablas. $t_{\frac{\alpha}{2},\nu}$ donde $\nu$ representa los grados de libertad. 
-Ahora podemos considerar que rechazar $H_0$ cuando $|t|$ es grande es equivalente a rechazar $H_0$ si $t^2$ es también grande, donde
-
-$t^2\,=\,\frac{\bar{X}-\mu_0}{s^2/n}\,=\,n(\bar{X}-\mu_0)(s^2)^{-1}(\bar{X}-\mu_0)$  
-
-El estadístico $t^2$ representa el cuadrado de la distancia de la media de la muestra $\bar{X}$ con respecto al valor de prueba $\mu_0$, los valores están dados en unidades estimadas de desviación estándar $s/\sqrt{n}$.
-
-Una vez calculadas la $\bar{X}$ y la $s^2$ de la muestra observada, se hace la prueba de hipótesis y se rechaza $H_0$ a un nivel de confianza $\alpha$, si
-
-$n(\bar{x}-\mu_0)(s^2)^{-1}(\bar{x}-\mu_0) \geq t^2_{n-1}\,(\alpha/2)$
-
-donde $t^2_{n-1}\,(\alpha/2)$ es el valor crítico superior y que el área bajo la distribución $t^2$ con $\nu=n-1$ grados de libertad equivale a un porcentaje equivalente a $100(\alpha/2)$.
-
-Suponerse ahora que se desea encontrar un intervalo de confianza para la media de la distribución, sea entonces una distribución normal con media $\mu$ y varianza desconocida la distribución de muestreo de la estadística
-
-$T=\frac{\bar{X}-\mu}{s/\sqrt{n}}$   
-
-es una distribución $t$ con $n-1$ grados de libertad por lo que 
-
-$P(-t_{\alpha/2,\,n-1} \leq T \leq t_{\alpha/2,\,n-1})=1-\alpha$
-
-o
-
-$P(-t_{\alpha/2,\,n-1} \leq \frac{\bar{X}-\mu}{S/\sqrt{n}} \leq t_{\alpha/2,\,n-1})=1-\alpha$
-
-después de reacomodar se obtiene
-
-$P(\bar{X}-t_{\alpha/2,\,n-1}\,\frac{S}{\sqrt{n}} \leq \mu \leq \bar{X}+t_{\alpha/2,\,n-1}\,\frac{S}{\sqrt{n}})= 1-\alpha$
-
-El intervalo de confianza corresponde a los valores de $\mu_0$ que no serán rechazados con un nivel de confianza $\alpha$ en un prueba de hipótesis $H_0:\mu=\mu_0$
 
 \subsection{$T^2$ de Hotteling}
 
@@ -823,7 +847,6 @@ Donde $\chi_(p)^2$ es una distribución chi cuadrada con $p$ grados de libertad,
 \paragraph{} 
 
 Suponiendo que no se cuenta con información histórica es necesario estimar los parámetros 
-
 
 
 y que sigue una distribución
