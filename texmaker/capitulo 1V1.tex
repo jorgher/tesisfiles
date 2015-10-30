@@ -1,0 +1,940 @@
+%% LyX 2.1.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english,spanish]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=4cm,rmargin=3cm}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{setspace}
+\PassOptionsToPackage{normalem}{ulem}
+\usepackage{ulem}
+\onehalfspacing
+
+
+\begin{document}
+
+\chapter{Calidad y Control Estadístico del Proceso (CEP)}
+
+
+\section{Significado de calidad y mejora de la calidad}
+
+La calidad de un producto o servicio es uno de los factores importantes
+en el que los usuarios basan su decisión para la adquisición del mismo,
+de ahí que las compañías adopten técnicas y filosofías tendientes
+a mejorar la calidad de los productos y servicios que ofrecen.
+
+Es entonces que una compañía debe establecer políticas en relación
+a cómo lograr este objetivo, ya que, dependerá del tipo de empresa
+la relevancia que le de a la técnica y filosofía empleada, el Dr Garvin
+(1987) hace referencia a 8 componentes de la calidad que una organización
+debe considerar para establecer su política y programa de calidad.
+
+Desempeño del producto.
+
+Confiabilidad.
+
+Durabilidad.
+
+Facilidad de mantenimiento y servicio.
+
+Estética.
+
+Accesorios.
+
+Calidad percibida (histórica)
+
+Cumplimiento de estándares.
+
+Definir entonces la calidad de un producto no es una tarea simple
+y no necesariamente se debe enfocar en un solo criterio; Un enfoque
+es que un producto es de calidad si es ``adecuado al uso'', es decir,
+que el producto satisface adecuadamente la necesidad por la cuál fue
+desarrollado. Pero existen diferentes niveles ya que, un producto
+puede satisfacer una necesidad de uso pero a su vez el cliente puede
+esperar más en términos de otro criterio de los anteriormente mencionados,
+por ejemplo un automóvil en general satisface la necesidad de transporte,
+pero existen otros aspectos que distinguen a los diferentes automóviles
+(estéticos, potencia, accesorios, durabilidad, facilidad y costos
+de mantenimiento, etc) y por tanto se pudiera pensar que éstos tienen
+un mayor grado de calidad.
+
+Otro enfoque para definir la calidad ha sido el que los productos
+deben ``cumplir las especificaciones'' mismo que dada su concepción
+se dirige hacia la verificación de especificaciones en la elaboración
+del producto, aspectos relacionados con control de calidad (inspecciones,
+pruebas) y aseguramiento de calidad (capacitación, ambiente laboral,
+etc). El criterio anterior nos conduce a pensar que la calidad esta
+entonces relacionada exclusivamente con la elaboración de los productos
+o servicios.
+
+Sin embargo un criterio general pudiera ser que una vez que el diseño
+esta definido, es decir que, en la concepción del producto se tomaron
+en cuenta todas las característica mencionadas por Galvin. Se deben
+establecer los procesos necesarios para llegar a su consumación y
+es dentro de estos procesos en donde se presentan diferentes características
+críticas que son necesario controlar para garantizar la conformancia
+con las especificaciones y lograr que el producto satisfaga la necesidad
+para la cuál fue desarrollado.
+
+Pero entonces ¿cuál es el criterio que nos permite lo anterior?, y
+es que a través de la historia relacionada con la manufactura de bienes
+se ha observado que la ``dispersión'' en las dimensiones de una
+especificación propician fallas que afectan directamente el desempeño
+del producto.
+
+Por lo anterior se hace necesario \uline{controlar esta variación}
+y se llega así a una definición de calidad que es aceptada en general
+y es que la \textbf{calidad es inversamente proporcional a la variabilidad}.
+
+Es decir a menor dispersión de los valores con respecto a un valor
+nominal los productos desempeñan mejor su función, tienen menos descomposturas
+y sobre todo el costo de fabricación se reduce. De ahí la importancia
+de una mejora continua enfocada a la \uline{reducción de la variación
+de las características críticas del producto}.
+
+Debido a que la variación es un término estadístico, es necesario
+para controlar la misma el uso de métodos estadísticos, es común entonces
+la clasificación de las características críticas que pueden ser de
+dos tipos atributos o variables, la diferencia fundamental es que
+las variables son continuas, o bien pueden ser medidas (con algún
+instrumento) y los atributos son variables discretas, pueden ser contadas
+(número de errores).
+
+Estas características se evalúan con respecto a especificaciones relacionadas
+con dimensiones para el caso de variables o brillo de una superficie
+cuando hablamos de atributos.
+
+En el diseño las especificaciones se establecen con una tolerancia
+y esto permite definir el limite superior e inferior de la especificación,
+Tradicionalmente los ingenieros de diseño trabajan sus proyectos sin
+considerar otros factores que pueden afectar la calidad, factores
+relacionados con la manufactura del producto (materiales, maquinaria,
+métodos, medio ambiente, capacitación) de ahí que recientemente se
+ha considerado que el proceso de diseño tiene que ser un trabajo de
+equipo involucrando a ingenieros de manufactura, calidad, supervisores
+de producción, etc, y se ha llamado a este nuevo enfoque \textbf{ingeniería concurrente}.
+
+
+\section{Una pequeña historia del control y mejora de la calidad}
+
+La calidad es virtualmente una parte integral de los bienes y servicios,
+sin embargo métodos formales de mantenimiento y control no se han
+desarrollado sino a últimas fechas, el desarrollo de la manufactura
+moderna surge con los trabajos de Frederic W. Taylor que enfatiza
+en la necesidad de cambiar los sistemas de manufactura con la finalidad
+de incrementar la productividad; antes se responsabilizaba a una persona
+de la manufactura de un producto (artesano), Taylor establece que
+es posible dividir la manufactura de un producto en varios pasos y
+al hacer esto, se incrementara la cantidad de artículos producidos.
+
+Posteriormente los trabajos de Frank Gilbreth y otros, se enfocan
+en mejorar los métodos y movimientos que se usan en cada uno de los
+pasos con la finalidad de establecer tiempos estándares de manufactura.
+Todo esto sin considerar que la calidad del producto se verá afectada
+por el hecho de que mas personas están involucradas en su fabricación,
+además de que esta estandarización conduce a la mecanización y a inhibir
+la innovación y la mejora continua.
+
+En 1924 Walter A. Shewhart de Bell Telephonics desarrolla el concepto
+de \textbf{control estadístico}, a finales de los años 20 Harold F.
+Dodge y Harry G. Roming desarrollan el \textbf{muestreo de aceptación}
+como una alternativa a la inspección 100 por ciento.
+
+Es en la segunda guerra donde se implementa el control estadístico
+con la finalidad de controlar y mejorar la calidad de los productos.
+La ASQC se forma en 1946 con la finalidad de promover el uso de métodos
+estadísticos para el control de la calidad. En las décadas de los
+50\'{s} y 60\'{s} surge la ingeniería de confiabilidad y el punto
+de vista que la calidad es una forma de administrar las organizaciones.
+
+En 1950 se comienza con el uso del diseño de experimentos en los Estados
+Unidos. No es sino a partir de la década de los 80\'{s} cuando se
+enfatiza el uso de métodos estadísticos para la mejora de la calidad
+y la reducción de los costos de manufactura.
+
+
+\section{Métodos estadísticos para el control de calidad y el mejoramiento}
+
+La base para definir que métodos estadísticos se se debe usar para
+la mejora de la calidad de un producto, es el concepto de proceso,
+entradas, salidas, actividades que transforman las entradas y un mecanismo
+de control; dentro de las entradas se pueden dividir en controlables
+y no controlables. 
+
+Para controlar las actividades que transforman las entradas (materias
+primas, subesambles, etc) es necesario establecer métodos estadísticos
+el más común es el uso de gráficos de control.
+
+
+\subsection{Gráficos de Control. }
+
+Con su uso, es posible medir el desempeño de las características críticas
+(longitud, dureza, etc), lo cuál asegura la calidad del producto.
+La finalidad de la gráfica es comparar la variación entre la muestra
+tomada en un determinado instante y la variación entre muestras a
+lo largo del ciclo de producción.
+
+La comparación se hace con respecto de limites de control establecidos
+preliminarmente y si en algún momento del proceso, la toma de datos
+y los estadísticos generados (media-rango) se comportan de manera
+anormal, se debe detener el mismo y encontrar la causa o causas que
+provocan la variación.
+
+Es decir, las gráficas son una herramienta que permite el monitoreo
+de las características identificadas como críticas asegurando la calidad
+del producto.
+
+La siguiente figura es un ejemplo de gráfica de medias.
+
+\begin{figure}[H]
+\centering
+\protect\includegraphics[scale=0.5]{\string"tesis/graficacontrolmedia\string".png}
+\caption{Proceso en control estadístico}
+\label{f1}
+\end{figure}
+
+
+De acuerdo al criterio de normalidad Figura \ref{f2} la dispersión y el
+punto medio se mantendrán dentro de ciertos límites y al observar
+que los estadísticos (media y desviación estándar) sufren variaciones
+anormales es tiempo de revisar el proceso para identificar la causa
+o causas que provocan que el comportamiento \textbf{Normal} se halla
+modificado.
+
+\begin{figure}[H]
+\centering
+\protect\includegraphics[clip,scale=0.6]{\string"Home/Dropbox/TESIS/imagenes/tres sigma\string".png}
+\caption{\footnotesize{Un comportamiento \textbf{Normal} se refiere a que en general en un proceso, 68.2 \% de los datos se
+agrupan a mas menos una desviación estándar, 95.4 \% a mas menos dos
+desviaciones estándar y 99.74 \% de los datos a mas menos tres desviaciones
+estándar.}}
+\label{f2}
+\end{figure}
+
+
+Las causas regularmente se identifican en dos las que son \textbf{inherentes}
+(comunes) al proceso que lo hacen variar pero que no afectan la calidad
+final del producto, con la presencia de éstas se calculan los límites
+de control que permiten monitorear el proceso; eliminar las causas
+comunes requiere de un modificación mayor. Es importante mencionar
+que los límites de control no corresponden a los límites de especificación
+establecidos para la característica estudiada.
+
+Las causas que por lo regular propician que el proceso se salga de
+control (Figura 3) se les denomina \textbf{asignables} (especiales)
+y son causas que no son parte del mismo sino que se presentan de manera
+esporádica, como por ejemplo cuando una herramienta se desgasta, el
+descuido de un operador al momento de ajustar un proceso, problemas
+con los instrumentos de medición o materia prima, un accidente de
+trabajo, entre otros.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{\string"Home/Dropbox/TESIS/imagenes/fuera de control\string".jpg}
+\caption{Punto fuera de limite inferior}
+\label{f3}
+\end{figure}
+
+Con lo anterior se puede ver que, las gráficas de control permiten
+predecir el comportamiento del proceso dentro de ciertos límites con
+los que se establece la hipótesis nula $H_{0}:$ ``el proceso se
+encuentra dentro de control estadístico''.
+
+Cuando se presenta un punto fuera de éstos se tiene la posibilidad
+de cometer ya sea el error tipo I, error $\alpha$ (Rechazar $H_{0}$
+cuando es verdadera, ``riesgo del fabricante''), o tipo II, error
+$\beta$ (No rechazar $H_{0}$ cuando es falsa, ``riesgo del consumidor'').
+
+
+\paragraph{Límites de control.}
+
+Es una práctica común establecer los limites de control a una distancia
+de 3$\sigma$ de la media es decir $LSC=\mu+3\sigma$ y $LIC=\mu-3\sigma$
+donde $LSC$ significa Límite Superior de Control y $LIC$ Límite
+Inferior de Control, en este intervalo se concentraran $99.74\%$
+de los valores de la característica distribuidos normalmente.
+
+La especificación de los límites es una decisión importante ya que
+influyen directamente en los errores Tipo I y II, mientras mas alejados
+de la media se disminuye la probabilidad del error Tipo I pero a su
+vez aumenta la probabilidad del error Tipo II. Notese en la Figura \ref{f2} que
+el empleo de limites de control 3 sigma implica que $\alpha=0.0027$,
+esto es la probabilidad de que la variable esté fuera de los límites
+de control cuando el proceso está en control estadístico es $p=0.0027$. 
+
+El tamaño de la muestra es importante para establecer los límites
+ya que su relación es inversa; si la muestra es grande, los límites
+se encuentran mas cercanos al valor medio, esto permite detectar tendencias
+o corrimientos en el los valores de las características que se están
+monitoreando en el proceso.
+
+También es importante establecer la frecuencia del muestreo, lo ideal
+en todo caso son muestras grandes con pequeños intervalos entre ellas,
+esto por lo regular no es posible por cuestiones prácticas y de costo,
+entonces si se considera la probabilidad $p$ es factible encontrar
+una cantidad probable de observaciones que estarán en control antes
+de una fuera, a esta medida se le denomina longitud de corrida promedio
+$(ARL)$ de sus iniciales en ingles. 
+En esencia, la $ARL$ es el número promedio de puntos que deben graficarse antes de que uno de ellos
+indique una condición de proceso fuera de control. 
+Para cualquier gráfica
+de control de Shewhart la $ARL$ se calcula a partir de una variable
+aleatoria geométrica como
+
+\begin{eqnarray*}
+ARL & = & \frac{1}{p}\\
+ & = & \frac{1}{0.0027}\\
+ARL & \cong & 370
+\end{eqnarray*}
+
+
+es decir que si el proceso está bajo control estadístico \footnote{Un proceso esta bajo control estadístico cuando somos capaces de predecir con una probabilidad de error dada, los resultados de su próxima ejecución.} no se presenta una señal fuera de fuera de control por cada 370 observaciones en promedio.
+
+
+\paragraph{Patrones en gráficas de control}
+
+Una gráfica de control puede indicar una condición fuera de control
+cuando se presenta uno o más puntos fuera de los limites Figura \ref{f3},
+también cuando la distribución de puntos en un lapso de tiempo presentan
+características de anormalidad, es decir, corridas, una serie de puntos
+(8 o mas) indicando una tendencia ascendente o descendente, patrones
+cíclicos (clusters), después de cierto número de observaciones se
+presentan puntos que se repiten Figura \ref{f4}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{\string"Home/Dropbox/TESIS/imagenes/causas fuera control\string".jpg}}
+\caption{\textbf{Diferentes condiciones fuera de control}}
+\label{f4}
+\end{figure}
+
+
+El problema en la operación de las cartas de control es entonces reconocer
+cuando se presentan las condiciones mencionadas, por tanto es necesario
+capacitación adecuada. Una guía práctica para la identificación de
+patrones puede ser la establecida en el Western Electric Handbook
+que dice, Un proceso está fuera de control cuando se presenta:
+\begin{itemize}
+\item Un punto cae más allá de los límites de control 3-sigma.
+\item Dos o tres puntos consecutivos caen más allá de un límite 2-sigma.
+\item Cuatro o cinco puntos consecutivos están a una distancia de 1-sigma
+o mayor de la linea central.
+\item Ocho puntos consecutivos de la gráfica del mismo lado de la linea
+central.
+\end{itemize}
+
+\subsection{Diseño de experimentos}
+
+Es una herramienta que permite identificar las causas clave que influyen
+en la variabilidad de las características críticas del proceso. Es
+un enfoque que a partir de la variación controlada de los factores
+de entrada se identifican los efectos que se tiene sobre los resultados
+del proceso.
+
+Uno de los métodos mas usados es el diseño factorial; El diseño de
+experimentos es una de las herramientas fuera de linea mas usadas
+en el diseño preliminar de los procesos.
+
+Una vez identificadas la variables que afectan las salidas del proceso,
+es necesario modelar estas relaciones de entrada salida, para lo cuál
+se utilizan otros métodos estadísticos como es análisis de regresión
+y análisis de series de tiempo.
+
+Estos modelos ayudan a determinar la naturaleza y magnitud de los
+ajustes requeridos. En muchos procesos una vez entendida la naturaleza
+dinámica de las relaciones entrada salida, es factible de manera rutinaria
+hacer ajustes al mismo de tal manera que valores futuros de las características
+de calidad del producto se mantengan en especificación. A estas actividades
+rutinarias de ajuste se les denomina ingeniería de control.
+
+
+\subsection{Muestreo de aceptación}
+
+Estrechamente relacionado con actividades de inspección y prueba del
+producto, la inspección se puede realizar en mas de una etapa del
+proceso, usualmente ocurre a la entrada inspección de recibo y a la
+salida, es decir antes de que el producto sea enviado al cliente.
+
+Consiste en tomar una muestra representativa de un lote del producto
+y determinar la decisión sobre si aceptar o rechazar en base a los
+resultados de la inspección. Así como se menciono anteriormente existen
+dos tipos de errores (I y II) discutidos previamente y el riesgo lo
+determina el valor de AQL (Average Quality Limit) que se haya acordado
+con anterioridad.
+
+Los sistemas modernos de calidad usualmente ponen menor énfasis en
+la inspección de aceptación y se procura que el control estadístico
+del proceso y el diseño de experimentos sean las herramientas de control
+adecuadas. 
+
+El objetivo principal de las actividades de la ingeniería de control
+es la reducción sistemática de la variación de las características
+críticas de los procesos, lo que conduce a mejor desempeño del producto
+y por ende una ventaja competitiva para la empresa.
+
+
+\section{Aspectos administrativos de la mejora de la calidad}
+
+
+\subsection{Documentación}
+
+El uso de métodos estadísticos de mejora debe estar acompañado de
+una política de calidad de la empresa que le de fuerza y permita una
+implementación eficiente y continua. Una administración eficiente
+de la calidad debe incluir tres actividades básicas: planificación
+de la calidad, aseguramiento de la calidad, control y mejora.
+
+Sin un plan estratégico de calidad que incluya productos, procesos,
+recursos humanos, infraestructura y sobre todo clientes y sus necesidades,
+la operación del negocio esta condenada a sufrir pérdidas debido a
+demoras, desperdicios, retornos de producto, retrabajos, mal ambiente
+de trabajo, etc. Es en esta etapa en la que la organización con base
+en las ocho dimensiones mencionadas anteriormente define misión, objetivos,
+metas e indicadores que le permitan enfrentar los retos que la realidad
+actual le imponen.
+
+
+\subsection{Aseguramiento de la calidad}
+
+Son las actividades que se encaminan a garantizar que los productos
+y servicios de la organización cumplan de manera satisfactoria las
+necesidades de los clientes internos y externos.
+
+Elementos del aseguramiento son la política de calidad, procedimientos,
+instrucciones de trabajo y especificaciones. Todos éstos documentos
+instruyen al personal en el qué se debe hacer, cómo hacerlo, con qué
+herramientas e instrumentos, además establecen planes de mantenimiento
+de equipo, planes de capacitación del personal, programas de superación
+y crecimiento en la organización, registros del desempeño de las operaciones
+donde las características críticas del producto y servicios sean relevantes
+para la mejora continua.
+
+
+\subsection{Control y Mejora de la calidad}
+
+Involucra las actividades relacionadas con el ``control de las características
+críticas del producto'', los métodos estadísticos son las herramientas
+clave de estas actividades ya que, el control y reducción de la variación
+es un factor clave, por lo que el control estadístico y el diseño
+de experimentos sean los métodos primordiales en esta etapa de la
+operación. 
+
+La mejora continua se hace usualmente proyecto a proyecto e involucra
+trabajo en equipo y también el uso de herramientas pensadas para esta
+actividad, Diagramas de Pareto, Diagramas de Causa Efecto (Ishikawa),
+Metodología de Solución de Problemas, ``Planear, Implementar Controlar
+y Mejorar'', son los verbos sustanciales de ésta etapa.
+
+Por lo anterior es posible concluir que la administración de la calidad
+es para la organización de nuestro tiempo una necesidad fundamental
+y todo administrador que busque el crecimiento de su organización
+además de la creatividad que implica el diseño y concepción de productos
+y servicios debe fomentar en su personal una filosofía enfocada a
+la búsqueda constante de la calidad y mejora.
+
+
+\section{Filosofías de Calidad y Estrategias Administrativas}
+
+Dentro de los principales filósofos de la calidad se encuentra el
+\textbf{\emph{Dr Edward Deming}}, que a partir de sus 14 puntos pretende
+que las organizaciones mejoren su productividad y por lo tanto su
+permanencia en el mercado. Estos puntos se resumen de la manera siguiente:
+\begin{enumerate}
+\item Crear constancia en el propósito de mejorar los productos y servicios
+que se ofrecen.
+\item Adoptar por parte de la administración una filosofía en la que la
+calidad en lugar de la cantidad sea la que dirija la operación.
+\item No adoptar la inspección para garantizar la calidad de los productos
+o servicios.
+\item No seleccionar a los proveedores con base en el precio incluir la
+calidad de sus productos.
+\item La mejora continua de los procesos es un elemento que garantiza la
+permanencia del negocio.
+\item Capacitación enfocada en la calidad usando métodos que así la garanticen.
+\item Liderazgo y supervisión del personal enfocada en la mejora.
+\item Eliminar las barreras de comunicación empleado supervisor gerencia.
+\item Trabajo en equipo
+\item Eliminar metas y eslóganes sin un plan que permita el logro de estas.
+\item Eliminar los estándares de producción y metas numéricas impuestas
+históricamente sin la consideración de las características de calidad
+que deben ser satisfechas en la operación.
+\item Es importante que la administración escuche al personal, sugerencias,
+comentarios y quejas de los empleados.
+\item Instituir un programa de capacitación continuo para todos los empleados.
+\item Crear una estructura en la alta gerencia que de seguimiento y refuerce
+la implementación de los 13 puntos anteriores.
+\end{enumerate}
+De lo anterior se puede ver que el Dr. Deming hace un vigoroso énfasis
+en el cambio organizacional, pero también se enfoca en los detalles
+del cambio indicando que se debe comenzar con la identificación de
+los factores que afectan la calidad y a partir de ahí, los métodos
+estadísticos tienen su mayor contribución. Control Estadístico del
+Proceso y el Diseño de Experimentos.
+
+Deming frecuentemente hablo y escribió acerca de los siete pecados
+de la administración.
+\begin{enumerate}
+\item Falta de constancia en el propósito
+\item Énfasis en las utilidades a corto plazo
+\item Evaluación del desempeño 
+\item Cambios frecuentes de la alta administración
+\item Uso exclusivo de estadísticas para orientar el desarrollo de la empresa
+\item Costo excesivo de gastos médicos
+\item Costos excesivos debidos a penalizaciones legales.
+\end{enumerate}
+Deming recomienda como guía para la mejora continua el \textbf{ciclo
+de Shewhart} que consiste en cuatro pasos: 
+\begin{enumerate}
+\item \textbf{Planear}. Ante cualquier problema lo primero que debemos hacer
+es establecer un programa de trabajo en el que se describan todas
+las actividades a realizar con tiempos de entrega y responsables. 
+\item \textbf{Hacer}. Ejecutar el plan
+\item \textbf{Verificar}. Una vez en la operación llevar registros de los
+datos obtenidos.
+\item \textbf{Actuar}. Cuando se encuentren variaciones de los resultados
+esperados aplicar las herramientas de solución de problemas y establecer
+las nuevas actividades de mejora.
+\end{enumerate}
+Otro gran filosofo y fundador del control de calidad es \textbf{\emph{Joseph
+M. Duran }}la administración de calidad de acuerdo a este autor se
+debe fundamentar en tres pasos. \emph{Planeación, Control y Mejora}
+conocida como la\textbf{\emph{ trilogía de Juran}}, hay que hacer
+notar la diferencia con el ciclo de mejora de Shewhart en que estas
+fases se refieren al sistema de calidad en su conjunto, de ahí que
+cuando se habla de planear se refiere a la identificación de clientes
+y sus necesidades para diseñar productos acordes, establecer los procesos
+necesarios para realizar los productos y todas las acciones necesarias
+para que éstos se desempeñen de acuerdo a lo esperado, Controlar los
+procesos sería la siguiente etapa para identificar internamente las
+posibles desviaciones de las especificaciones y por último la mejora
+continua, identificados los problemas establecer planes y programas
+para eliminarlos o en su caso reducir las causas que los provocan.
+
+En la etapa de control es donde los métodos estadísticos mencionados
+anteriormente y desarrollados principalmente por Feigenbaum son aplicados. 
+
+Pero \textbf{\emph{Armand V. Feigenbaum}} no solo trabajo sobre los
+métodos estadísticos sino que también propuso una filosofía de calidad
+llamada \textbf{Control Total de la Calidad} donde propone tres pasos
+para mejorar la calidad.
+\begin{enumerate}
+\item Liderazgo en calidad.\emph{ Planeación, Control y Mejora.}
+\item Tecnología de la calidad. 
+\item Compromiso de la gerencia.
+\end{enumerate}
+Así como Deming y Juran el propone su metodología basada en 19 pasos
+para la mejora de los procesos, sugiere que gran parte de la capacidad
+técnica este concentrada en un área de la organización o un departamento
+especializado que contrasta con la visión actual de que el conocimiento
+y uso de métodos estadísticos debe ser una actividad que cualquier
+departamento tenga las competencias necesarias para llevarlo a cabo.
+
+De lo anterior se puede ver que entre éstos autores existen mas coincidencias
+que divergencias en sus filosofías, y que se puede resumir en el hecho
+de que todos enfatizan a la calidad como una herramienta que garantiza
+la permanencia de la organización, el necesario compromiso de la administración
+para la mejora de la calidad y el uso de métodos y técnicas estadísticas
+para el logro de ésta transición.
+
+\textbf{\emph{Administración Total de la Calidad (ATC)}} Es una estrategia
+para la implementación y administración de la calidad a nivel organizacional,
+dando énfasis al cambio cultural, enfoque al cliente, mejora de proveedores,
+integración del sistema de calidad con los objetivos de la empresa.
+
+\textbf{\emph{ATC}} ha tenido un éxito moderado por una serie de razones,
+entre éstas, falta de compromiso e involucramiento de los altos cuadros
+gerenciales, uso inadecuado de herramientas estadísticas, reconocimiento
+insuficiente de la importancia en la reducción de la variabilidad
+como un objetivo primordial de la empresa, falta de alineación entre
+objetivos del sistema de calidad y los objetivos de producción de
+la empresa y por ultimo énfasis excesivo en capacitación en lugar
+de educación técnica.
+
+Durante el periodo de auge de este programa surge otro desarrollado
+por \textbf{\emph{Bill Crosby}} denominado la \textbf{La calidad es
+gratis} que busca reducir lo que denomina \textbf{Costos de Calidad}
+identificados como:
+\begin{itemize}
+\item Costos de prevención.
+
+\begin{itemize}
+\item Planeación de la calidad e ingeniería
+\item Revisión de nuevos productos
+\item Diseño de productos y procesos
+\item Control de procesos
+\item Costos de confiabilidad
+\item Entrenamiento y capacitación
+\item Registro, Control y Análisis de información
+\end{itemize}
+\item Costos de evaluación (detección)
+
+\begin{itemize}
+\item Inspección y prueba de recibo de materiales
+\item Inspección y prueba de productos (en proceso y final)
+\item Materiales y servicios consumidos
+\item Calibración del equipo de prueba
+\end{itemize}
+\item Costos de falla interna
+
+\begin{itemize}
+\item Desperdicios
+\item Retrabajo
+\item Análisis de fallas
+\item Tiempo muerto
+\item Pérdidas de productividad
+\end{itemize}
+\item Costos de falla externa
+
+\begin{itemize}
+\item Ajustes por quejas de clientes
+\item Productos regresados
+\item Costos de seguros y fianzas
+\item Costos por garantías
+\item Costos indirectos
+\end{itemize}
+\end{itemize}
+Este programa clama que por cada dolar invertido en Reducir Costos
+de Prevención redundará en un ahorro de 10 dolares en Costos de Falla
+Interna y Externa; de ahí la importancia de llevar el control y registro
+de éstos.
+
+Para obtener reducciones en los costos se hace necesario entonces
+una metodología que incluya la detección, análisis y reducción de
+los costos de calidad, herramientas útiles para analizar son los diagramas
+de \textbf{Pareto}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{\string"Home/Dropbox/TESIS/imagenes/paretofallainterna\string".png}
+\caption{\textbf{Costos de Calidad}}
+\label{f5}
+\end{figure}
+ En la figura podemos observar que la falla interna es el elemento
+relevante de costos, pero además podemos desglosar e identificar aquellos
+factores dentro de la categoría que aportan mayormente. ver siguiente
+gráfica.
+
+\pagebreak
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{\string"Home/Dropbox/TESIS/imagenes/paretodesglosefallainterna\string".png}}
+\caption{\textbf{Desgloce falla interna}}
+\label{f6}
+\end{figure}
+
+ llegando asía a identificar factores relevantes para utilizar herramientas
+como el diagrama de Ishikawa\textbf{}\footnote{\textbf{El Dr. Kaoru Ishikawa. }Las principales ideas de Ishikawa
+se encuentran en su libro ¿Qué es el control total de calidad?: la
+modalidad japonesa. Donde hace énfasis en las diferencias culturales
+entre Occidente y Japón para la implementación y administración del
+\textbf{\emph{Control Total de Calidad (CTC)}}}\textbf{ }que permite a través de un desglose con las 5 m's \emph{\uline{Método,
+Material, Medio Ambiente, Mano de Obra y Mediciones}} llegar a determinar
+que causas son las que provocan los problemas identificados.
+
+
+
+\pagebreak
+\begin{figure}[H]
+\centering
+\includegraphics{Home/Dropbox/TESIS/imagenes/diagrama_ishikawa.jpeg}}
+\caption{\textbf{Diagrama ISHIKAWA}}
+\label{f7}
+\end{figure}
+
+
+Pero bien ¿Que tanto es posible reducir los costos de calidad?.
+
+Si bien en algunas organizaciones es posible reducir los costos de
+calidad significativamente, el llegar a cero costos no es realista,
+debido a que para llegar a cero sería necesario incrementar los costos
+de prevencion, por lo que el adecuado balance que beneficie a la organización
+es también un elemento a considerar cuando se adopta esta metodología.
+
+Otro programa iniciado por la empresa \textbf{Motorola} se ha convertido
+también en una filosofía que algunas organizaciones han tomado, este
+programa se llama \textbf{\emph{Seis Sigma}} toma su nombre de la
+distribución normal que como se mencionó anteriormente nos permite
+identificar la variación de las características del producto que afectan
+significativamente a la calidad.
+
+El concepto seis sigma de Motorola consiste en reducir la variación
+en el proceso de tal manera que los límites de especificación se encuentren
+a seis veces la desviación estándar del valor medio (especificación).
+Lo que conduce a tener únicamente 2 partes por billón producidas.
+
+\pagebreak
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Home/Dropbox/TESIS/imagenes/MotorolaSeisSigma}}
+\caption{\textbf{Efecto del desplazamiento de la media}}
+\label{f8}
+\end{figure}
+
+
+Lo anterior se puede verificar en la figura anterior ya que esta presenta
+la comparación de una característica de calidad en la cuál se establecen
+los límites de especificación a tres desviaciones estándar a cada
+lado de la media (a) con un modelo a seis desviaciones estándar (b).
+Se puede ver que considerando mas menos seis veces la desviación estándar
+en la figura (a) se tiene un porcentaje dentro de especificaciones
+de 99.73 que corresponde a 2700 partes por millón (ppm) defectuosas,
+pero cuando se analiza que un producto tiene mas de un componente
+la probabilidad de error se incrementa potencialmente es decir $p^{n}$
+por ejemplo si el producto final constara de 100 componentes la probabilidad
+de error final es $0.9973^{100}=0.7631$ es decir 23.7 \% de los productos
+estarían por debajo de tres sigma.
+
+De ahí que el concepto seis sigma implica que al colocar los limites
+de especificación a seis veces la desviación estándar de la media
+la $p=(0.999999998)^{100}=0.9999998$ es decir 2 ppm defectuoso situación
+que resulta mucho mayor satisfactoria desde el punto de vista del
+usuario final.
+
+En el caso anterior se supone que en la fabricación de los componentes
+todas las características de calidad se mantuviera centrada con respecto
+a la media (especificación) pero en la practica es común que existan
+desviaciones, bajo el enfoque seis sigma se pueden presentar desviaciones
+hasta de 1.5 veces la desviación estándar. Bajo este escenario el
+porcentaje de piezas dentro de especificaciones sería de 99.999660
+(ver Figura 8) lo que nos da un total de piezas aceptables $0.9999966^{100}=0.9996600$
+equivalente a 3.4 ppm defectuoso. 
+
+Lo anterior se establece con ciertas reservas ya que, para poder hacer
+predicciones con respecto al desempeño del proceso, los valores de
+la media y desviación estándar deben mantenerse \textbf{constantes}
+o sea, deben estar al rededor del valor medio esperado, lo que se
+ha denominado, el proceso debe ser \textbf{estable.}
+
+Si por alguna razón la media se desvía mas de 1.5 veces o la desviación
+estándar se incrementa, la predicción de 3.4 ppm no se puede garantizar,
+situación que es factible que ocurra en la práctica.
+
+De ahí que para garantizar la estabilidad de los procesos y por ende
+la reducción de los costos, una compañía que desea involucrarse en
+este programa debe hacer cambios a su estructura administrativa y
+a sus políticas de operación en las que se haga énfasis en la importancia
+de la filosofía para mejorar procesos de manufactura y de servicios
+internos y externos.
+
+Dentro de los cambios en la estructura organizacional es el de incluir
+un área específica que administre los esfuerzos en la implementación
+del programa contando con un \textbf{equipo líder} encargado de la
+supervisión, selección y administración de los proyectos de mejora
+propuestos por los \textbf{equipos seis sigma}, éste equipo está integrado
+por personal staff y un responsable técnico que se le ha llamado el
+maestro cinta negra (Master Black Belts). 
+
+El MBB es un individuo a tiempo completo desarrollando actividades
+de identificación, selección y revisión de proyectos, además lleva
+a cabo la capacitación a cintas negras (Black Belts) y cintas verdes
+(Green Belts).
+
+Cada equipo de mejora cuenta con un \textbf{campeón} cuya responsabilidad
+es evaluar y supervisar las actividades del equipo, solicitar y asignar
+recursos técnicos y materiales, así como eliminar obstáculos que impidan
+el desempeño exitoso del mismo. 
+
+El rol de campeón no es de tiempo completo y por lo regular tiene
+asignado mas de un proyecto, en los equipos hay un líder que puede
+ser un cinta negra (Black Belt) asignado tiempo completo que se asegura
+de que el proyecto se desarrolle en los tiempos y con los recursos
+asignados, los miembros de los equipos se escogen de diferentes áreas
+de la organización y son seleccionados con base en su experiencia,
+por lo regular dedican un 25 \% de su tiempo a las actividades del
+equipo. 
+
+Los Green Belts (cintas verdes) cuyo conocimiento de las herramientas
+seis sigma es menor que el de los cintas negras, por lo regular solo
+son miembros de los equipos seis sigma.
+
+La siguiente figura muestra la estructura típica de la organización
+seis sigma.
+
+\pagebreak
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{\string"Home/Dropbox/TESIS/imagenes/Estructura Equipo Seis Sigma\string".png}}
+\caption{\textbf{Organización equipos seis sigma}}
+\label{f9}
+\end{figure}
+
+
+Los proyectos en los que los equipos regularmente se ven involucrados
+se relacionan con:
+\begin{itemize}
+\item Reducción de los ciclos de manufactura.
+\item Eliminación de retrabajos y errores en los procesos
+\item Reducción de faltantes en inventarios 
+\item Reducción de variaciones en procesos no relacionados con la manufactura
+de productos (financieros, ventas, contables, etc)
+
+\begin{itemize}
+\item Reducción de errores en la nomina
+\item Reducción de errores en las ordenes de compra
+\item Reducción de errores en los estados financieros
+\item Minimizar costos de consultorías, etc.
+\end{itemize}
+\end{itemize}
+
+\paragraph{Metodología de mejora continua (DMAIC)}
+
+Un procedimiento de solución de problemas estructurado usado en los
+equipos seis sigma es el que se conoce como DMAIC donde las siglas
+quieren decir:
+\begin{itemize}
+\item Define (Definir) 
+\item Measure (Medir)
+\item Analize (Analizar)
+\item Improve (Mejorar)
+\item Control (Controlar)
+\end{itemize}
+
+\subparagraph{Define.}
+
+En esta etapa los equipos identifican las oportunidades de mejora,
+definen los objetivos de los clientes, mapean los procesos que permiten
+satisfacer tales objetivos y establecen un plan a seguir.
+
+
+\subparagraph{Measure}
+
+Definen que características medir, se establecen las actividades de
+recolección de datos, desarrollan las herramientas o controles si
+no existen y/o validar las existentes, establecen los niveles sigma
+de desempeño.
+
+
+\subparagraph{Analize}
+
+Se analizan los datos para encontrar causas potenciales de variación
+de los objetivos identificados, Se calcula la capacidad de los procesos,
+el flujo de los procesos y su tiempo de ciclo.
+
+
+\subparagraph{Improve}
+
+Generar y cuantificar soluciones posibles, evaluar y seleccionar la
+solución final, verificar y sustentar el proyecto para la aprobación
+final.
+
+
+\subparagraph{Control}
+
+Desarrollar planes de monitoreo y control, desarrollar procesos a
+prueba de fallas, controlar las características críticas definidas
+
+Entre cada actividad los equipos tienen reuniones de presentación
+de avances y resultados a los gerentes y dueños del proceso, en estas
+reuniones se analizan los avances para ver si se va a terminar el
+proyecto en el tiempo planeado o hacer ajustes al mismo, se discuten
+posibles modificaciones al proyecto con base en aportaciones de los
+dueños y gerentes, además se discuten e identifican posibles barreras
+que estén afectando el desempeño del equipo y se establezcan las estrategias
+para solventarlas o eliminarlas.
+
+Estas reuniones de evaluación son un paso determinante para el buen
+funcionamiento del programa seis sigma y es de vital importancia que
+estas se realicen inmediatamente después de que el equipo termine
+cada etapa.
+
+La estructura DMAIC favorece el pensamiento creativo y facilita los
+cambios al proceso dentro del ámbito del mismo, en caso de que el
+proceso no sea capaz de realizar los objetivos identificados en la
+etapa uno, se hace necesario un rediseño del mismo, La metodología
+\textbf{Seis Sigma} tiene contemplado otra metodoligía se le denomina
+diseño para seis sigma (DFSS).
+
+Una de las razones por las que se ha identificado que DMAIC es tan
+efectivo es que hace uso de un conjunto de herramientas que en su
+conjunto favorecen el proceso de solución, estas herramientas son:
+\begin{enumerate}
+\item Planeación y Calendarización de Proyectos. (Gantt Charts)
+\item Diagramas de Flujo (Mapeo) de Procesos.
+\item Análisis de Causa-Efecto. (ISHIKAWA)
+\item Análisis de Capacidad de Proceso. (Cpk, Ppk)
+\item Prueba de Hipótesis e Intervalos de Confianza.
+\item Análisis de Repetibilidad y Reproducibilidad de métodos de medición.
+\item Análisis de Modo y Falla Potencial.
+\item Control Estadístico del Proceso.
+\end{enumerate}
+Es importante resaltar aquí para fines del presente trabajo, que todos
+éstos métodos se enfocan en el control de una variable en particular
+(temperatura, espesor, altura, diámetro, cuentas por cobrar, tiempo
+de entrega, inventario de un artículo, etc) a este tipo de métodos
+los denominamos \textbf{univariados.}
+
+
+\subparagraph{Selección de proyectos.}
+
+Para la selección de un proyecto es importante identificar los beneficios
+económicos así como el \textbf{cambio sustancial} (breakthrough) a
+la operación de la organización, el \textbf{valor de oportunidad}
+de los proyectos debe ser un elemento de selección importante y es
+conveniente que la organización implemente un sistema adecuado para
+la medición del valor agregado de los proyectos, es decir que, estén
+alineados a los objetivos, reduzcan costos, eliminen errores, reduzcan
+el tiempo de ciclo del proceso, el tiempo de entrega a clientes externos
+o internos, mejoren las condiciones de trabajo (seguridad), uso eficiente
+de los recursos, además se busca que se mejore la capacidad de diseño
+de proceso, introducción de nuevos productos y servicios al mercado
+así como, mejora en los procesos de mercadotecnia y venta, en fin
+toda una gama de posibilidades de mejora.
+
+Es por eso que una organización enfocada en \textbf{Seis Sigma} mejora
+sus índices de productividad y por ende los indicadores financieros
+haciéndola mas interesante por los dividendos que pagará a los inversionistas,
+retorno de inversión y ganancia por acciones.
+
+Por tanto, la selección de proyectos es una de las actividades preponderante
+del programa, principalmente los proyectos deben tener una duración
+adecuada y aportar a los indicadores relevantes de la organización
+para ser aprobados. 
+
+Es por lo regular como método de seguimiento a proyectos un \textbf{panel
+de control} en el que se puedan verificar los avances de los proyectos
+y sus impactos en los indicadores organizacionales.
+
+Un ejemplo de panel de control se muestra en la siguiente gráfica.
+
+\pagebrea
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{\string"Home/Dropbox/TESIS/imagenes/lean six sigma bsc\string".jpg}}
+\caption{\textbf{Panel de control}}
+\label{f10}
+\end{figure}
+
+
+
+\section{Control estadístico de procesos multivariados}
+
+Como se ha podido observar a lo largo de la discusión anterior, la
+adopción de una filosofía de mejora es un elemento importante para
+la mejora de la calidad de sus productos y servicios. Y al hacerlo
+también se resalto que las herramientas estadísticas son una parte
+importante de los componentes de la filosofía, por tanto contar con
+los recursos humanos y técnicos sensibilizados y capacitados es un
+factor relevante para el éxito.
+
+Es también de mencionar importante que el compromiso de la gerencia
+para la adopción de la filosofía es preponderante, ya que si éste
+cualquier programa que se pretenda implantar resultara en tiempo y
+dinero malgastado.
+
+Usualmente por facilidad en el entrenamiento e implantación los métodos
+\textbf{univariados}, es decir aquellos que se enfocan en una variable
+son los que han tomado el papel principal en su uso, pero en la practica
+es normal encontrar que en un proceso existe mas de una característica
+a controlar y que además éstas se relacionan unas con otras. 
+
+De ahí que incorporar conceptos de estadística \textbf{multivariada}
+pasa a ser un tema importante en la implementación. En el presente
+trabajo se presentarán de manera general herramientas univariadas
+y multivariadas, haciendo énfasis en las últimas resaltando su eficiencia
+y eliminando algunos mitos por los que se ha evitado su uso
+\end{document}
